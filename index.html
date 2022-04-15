@@ -63,12 +63,12 @@
             const username = document.cookie.match(/username=(\w*)/)?.pop();
             const password = document.cookie.match(/password=(\w*)/)?.pop();
             if (username == null || password == null) {
-              window.location = '/login.html';
+              window.location = 'login.html';
               return;
             }
             const res = await auth(username, password);
             if (res.status != 200) {
-              window.location = '/login.html';
+              window.location = 'login.html';
               return;
             }
             document.cookie = `sessionId=${res.json.sessionId}`;
