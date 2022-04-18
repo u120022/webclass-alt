@@ -52,7 +52,7 @@
           if (res.status == 200) {
             document.cookie = `username=${username}`;
             document.cookie = `password=${password}`;
-            document.cookie = `sessionId=${res.json.sessionId}`;
+            document.cookie = `sessionId=${res.json.sessionId}; max-age=31536000`;
             window.location = 'index.html';
           }
         }
