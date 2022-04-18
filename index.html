@@ -71,7 +71,7 @@
               window.location = 'login.html';
               return;
             }
-            document.cookie = `sessionId=${res.json.sessionId}`;
+            document.cookie = `sessionId=${res.json.sessionId}; max-age=604800`;
           }
         }
         indicator.textContent = 'Verified! - Fetching...';
